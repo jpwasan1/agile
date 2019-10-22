@@ -27,10 +27,29 @@
         width: 300px;
         margin:5px;
     }
+
+    #demo{
+        display: none;
+    }
     
 </style>
 <body>
-    <div class="outer">
+
+
+        <div id="demo1" class="boder">
+                <h5>USERNAME:</h5>
+                <input type="text" placeholder="Enter Username">
+                <br><br>
+                
+                <h5>PASSWORD:</h5>
+                <input type="password" placeholder="Enter Password">
+                <br><br>
+                
+                <button class="btn btn-primary" onclick="login()">LOGIN</button>
+                </div>
+    <!--  -->
+    <div id="demo" class="outer">
+        <button onclick="chat1()">Back</button>
         <div class="room">
             <h1>SENDER</h1>
             <div class="messages" id="nMessages"></div>
@@ -96,7 +115,15 @@
         });
 
     
-    
+    function chat1() { 
+        document.getElementById('demo').style.display='none';
+        document.getElementById('demo1').style.display='block'; 
+} 
+
+function login() { 
+        document.getElementById('demo').style.display='block';
+        document.getElementById('demo1').style.display='none'; 
+} 
     </script>
 </body>
 </html>
